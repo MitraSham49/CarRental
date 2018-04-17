@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<a href="/add">Add a car</a>
+<div th:each="eachCar:${inventory}">
+    <p th:text="${eachCar.brand}"></p>
+    <p th:text="${eachCar.model}"></p>
+    <p th:text="${eachCar.colour}"></p>
+    <img th:src="${eachCar.image}"/>
+    
+    <p th:text="${eachCar.borrowed}?'Borrowed':'Available'"></p>
+    <a th:text="${eachCar.borrowed}?'Return':'Borrow'" th:href="@{/changestatus/{id}(id=${eachCar.id})}"></a>
+
+    <a th:href="@{/update/{id}(id=${eachCar.id})}">Update</a>
+    <a th:href="@{/detail/{id}(id=${eachCar.id})}">Detail</a>
+</div>
+</body>
+</html>
