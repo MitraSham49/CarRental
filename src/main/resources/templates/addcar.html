@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
+<div  class="container">
 <form action="/savecar" th:object="${aCar}" method="post">
     <input type="hidden" th:field="*{id}">
     <div class="form-group">
@@ -56,7 +56,7 @@
     <input type="checkbox" th:field="*{borrowed}" th:check="*{borrowed}">
     <button type="submit">Save a Car</button>
 </form>
-
+</div>
 
 <script src="/js/bootstrap.bundle.js"></script>
 <script src="/js/bootstrap.js"></script>
