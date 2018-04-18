@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-grip.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
 
 <a href="/add">Add a car</a>
 <div th:each="eachCar:${inventory}">
@@ -13,12 +18,14 @@
     <p th:text="${eachCar.model}"></p>
     <p th:text="${eachCar.colour}"></p>
     <img th:src="${eachCar.image}"/>
-    
+
     <p th:text="${eachCar.borrowed}?'Borrowed':'Available'"></p>
     <a th:text="${eachCar.borrowed}?'Return':'Borrow'" th:href="@{/changestatus/{id}(id=${eachCar.id})}"></a>
 
     <a th:href="@{/update/{id}(id=${eachCar.id})}">Update</a>
     <a th:href="@{/detail/{id}(id=${eachCar.id})}">Detail</a>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap.js"></script>
 </div>
 </body>
 </html>

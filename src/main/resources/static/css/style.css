@@ -1,0 +1,27 @@
+img {
+    height:100px;
+}
+
+.apple
+{
+    height:50px;
+}
+
+.car
+{
+    height:200px;
+}
+
+label.brandid{
+    color:blue;
+}
+
+header{
+    font-size:100px;
+    color:brown;
+}
+
+/*
+ul{
+    list-style-type:square;
+}*/
